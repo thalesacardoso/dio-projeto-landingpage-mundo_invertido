@@ -93,7 +93,7 @@ button {
 }
 
 
- /***** HEADER STYLES *****/
+/***** HEADER STYLES *****/
 
 header {
   background-color: var(--header-background-color);
@@ -143,3 +143,34 @@ header::before {
   color: var(--primary-color-contrast);
 }
 
+/***** WORLD CHARACTERS STYLES *****/
+
+.world-characters {
+  width: 100%;
+  max-width: 900px;
+  position: absolute;
+}
+
+#top-characters {
+  height: 100%;
+  background-color: var(--character-top-image-color);
+  mask: var(--character-top-image-src) bottom / contain no-repeat;
+}
+
+#bottom-characters {
+  height: 500px;
+  background-color: var(--character-bottom-image-color);
+  transform: rotateZ(180deg) scaleX(-1);
+  position: relative;
+  mask: var(--character-bottom-image-src) bottom / contain no-repeat;
+}
+
+
+/***** MAIN STYLES *****/
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
