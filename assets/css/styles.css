@@ -418,8 +418,6 @@ footer::after {
 
 
 
-
-
 /*******************************
     VERSÃO P/ NOTEBOOK
 *******************************/
@@ -489,8 +487,6 @@ footer::after {
     aspect-ratio: calc(16/9);
     position: inherit;
   }
-
-
 
   /***** GALLERY ***/
 
@@ -702,20 +698,6 @@ footer::after {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*******************************
     VERSÃO P/ SMARTPHONE
 *******************************/
@@ -724,13 +706,12 @@ footer::after {
 
   main {
     padding: 0 1rem 2rem;
-    gap: 7rem;
-    background-color: blue;
+    gap: 2rem;
   }
 
   section {
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     width: 100%;
     margin-bottom: 0;
   }
@@ -738,13 +719,18 @@ footer::after {
   h1,
   h2,
   h3 {
+    width: 100%;
     font-size: 1.5rem;
-    font-family: var(--featured-font-family);
+    text-align: center;
     margin-bottom: 20px;
   }
 
+  p {
+    text-align: center;
+  }
+
   #bottom-characters {
-    height: 200px;
+    height: 210px;
   }
 
   #section-inverted-world .section-texts,
@@ -757,8 +743,8 @@ footer::after {
   }
 
   #section-inverted-world .invert-element {
-    margin-top: 10px;
-    max-width: 400px;
+    margin-top: 16px;
+    max-width: 300px;
   }
 
   /***** TRAILER ***/
@@ -771,7 +757,7 @@ footer::after {
 
   #section-stranger-things-trailer .section-texts {
     order: 1;
-    text-align: left;
+    text-align: center;
   }
 
   #section-stranger-things-trailer .video-frame {
@@ -786,31 +772,40 @@ footer::after {
   /***** GALLERY ***/
 
   #section-stranger-things-gallery {
-    background: none;
+    background: none; 
+    padding: 2rem 0;
   }
 
-  #section-stranger-things-gallery .container h2 {
+  #section-stranger-things-gallery h2 {
     width: auto;
   }
 
-  #section-stranger-things-gallery ul.gallery-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+  #section-stranger-things-gallery .gallery-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   #section-stranger-things-gallery .gallery-image {
     width: 100%;
-    max-width: 400px;
-    outline: none;
+    height: 100%;
+    outline: 3px solid var(--highlight-color);
+    border: 1px solid var(--primary-color);
+    box-sizing: border-box;
   }
+
+  #section-stranger-things-gallery .gallery-image img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 0;
+  }
+
 
   /***** FORM ***/
 
   #section-form h2,
   #section-form .form-content,
-  #section-form .form-content h3,
   #section-form .form-container,
   #section-form .form-container form {
     width: 100%;
@@ -820,18 +815,21 @@ footer::after {
     gap: 16px;
   }
 
-  #section-form h2 {
-    text-align: left;
-  }
-
   #section-form .form-content {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin-top: 20px;
   }
 
-  #section-form .form-container::after {
+  #section-form .form-content h3 {
+    text-align: center;
+    margin: 32px 0 16px;
+  }
+  
+  #section-form .form-content .form-container {
+    max-width: 500px;
+  }
+
+  #section-form .form-content .form-container::after {
     left: 5px;
     top: 5px;
   }
